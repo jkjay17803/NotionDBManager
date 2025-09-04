@@ -68,10 +68,10 @@ for days in weekend_days:
     # 5. 요청 보내기
     response = requests.post(url, headers=headers, data=json.dumps(data))
 
-# 6. 결과 확인
-if response.status_code == 200:
-    print("데이터가 성공적으로 추가되었습니다!")
-    print(response.json())
-else:
-    print("데이터 추가 실패:", response.status_code)
-    print(response.text)
+    # 6. 결과 확인
+    if response.status_code == 200:
+        print("데이터가 성공적으로 추가되었습니다!")
+        print(response.json())
+    else:
+        print("데이터 추가 실패:", response.status_code)
+        print(response.text)
